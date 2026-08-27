@@ -13,24 +13,18 @@ function Hero() {
           transition={{ duration: 0.8 }}
         >
 
-          <div className="hero-status">
-            <span className="status-dot"></span>
-            Available for opportunities
-          </div>
-
           <p className="hero-greeting">
             Hello, I'm
           </p>
 
           <h1>
             Muhammad Setiawan
-            <span> Wibisono.</span>
+            <br />
+            <span>Wibisono.</span>
           </h1>
 
           <h2>
-            Computer Science Graduate
-            <br />
-            <span>Web Developer & Digital Solution Builder</span>
+            <span>Computer Science Graduate</span>
           </h2>
 
           <p className="hero-description">
@@ -91,11 +85,6 @@ function Hero() {
 
         </motion.div>
 
-      </div>
-
-      <div className="hero-scroll">
-        <span>Scroll to explore</span>
-        <div></div>
       </div>
     </section>
   )

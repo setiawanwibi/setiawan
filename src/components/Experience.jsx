@@ -20,7 +20,7 @@ function Experience() {
     {
       year: '2025',
       type: 'Professional Experience',
-      title: 'Web Development Intern',
+      title: 'Internship',
       organization: 'PT PLN (Persero)',
       description:
         'Supported digital administrative processes and field-work reporting activities through PLN internal systems while contributing to structured data management and documentation.',

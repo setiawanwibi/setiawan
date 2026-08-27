@@ -23,20 +23,6 @@ function Education() {
       detail: 'Bandar Lampung',
       featured: false,
     },
-    {
-      period: '2016 — 2019',
-      degree: 'Junior High School',
-      institution: 'SMP Negeri 25 Bandar Lampung',
-      detail: 'Bandar Lampung',
-      featured: false,
-    },
-    {
-      period: '2010 — 2016',
-      degree: 'Elementary School',
-      institution: 'SD Kartika II 5 Bandar Lampung',
-      detail: 'Bandar Lampung',
-      featured: false,
-    },
   ]
 
   const academicFocus = [
