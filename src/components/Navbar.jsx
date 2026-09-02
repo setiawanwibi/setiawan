@@ -6,11 +6,42 @@ function Navbar() {
   })
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
     document.documentElement.classList.toggle('light', isLight)
     localStorage.setItem('theme', isLight ? 'light' : 'dark')
   }, [isLight])
+
+  // ================================
+  // ACTIVE SECTION ON SCROLL
+  // ================================
+
+  useEffect(() => {
+    const sections = document.querySelectorAll(
+      '#home, #about, #experience, #projects, #skills, #contact'
+    )
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+
+        if (visibleSections.length > 0) {
+          setActiveSection(visibleSections[0].target.id)
+        }
+      },
+      {
+        rootMargin: '-25% 0px -55% 0px',
+        threshold: [0.1, 0.25, 0.5, 0.75],
+      }
+    )
+
+    sections.forEach(section => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
 
   const toggleTheme = () => {
     setIsLight(prev => !prev)
@@ -23,6 +54,15 @@ function Navbar() {
   const closeMenu = () => {
     setIsMenuOpen(false)
   }
+
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'contact', label: 'Contact' },
+  ]
 
   return (
     <header className="navbar">
@@ -43,12 +83,19 @@ function Navbar() {
 
         <nav className="navbar-menu">
 
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          {navItems.map(item => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className={activeSection === item.id ? 'active' : ''}
+              onClick={() => {
+                setActiveSection(item.id)
+                closeMenu()
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
 
         </nav>
 
@@ -110,8 +157,6 @@ function Navbar() {
           </button>
 
 
-
-
           {/* Mobile Menu Button */}
 
           <button
@@ -127,11 +172,9 @@ function Navbar() {
             }
             aria-expanded={isMenuOpen}
           >
-
             <span></span>
             <span></span>
             <span></span>
-
           </button>
 
         </div>
@@ -139,9 +182,7 @@ function Navbar() {
       </div>
 
 
-      {/* ================================
-          MOBILE SIDEBAR
-      ================================= */}
+      {/* MOBILE SIDEBAR */}
 
       <div
         className={`mobile-sidebar-overlay ${
@@ -160,10 +201,7 @@ function Navbar() {
         {/* Sidebar Header */}
 
         <div className="mobile-sidebar-header">
-
-          <span>
-            MENU
-          </span>
+          <span>MENU</span>
 
           <button
             type="button"
@@ -173,7 +211,6 @@ function Navbar() {
           >
             ×
           </button>
-
         </div>
 
 
@@ -181,53 +218,25 @@ function Navbar() {
 
         <nav className="mobile-sidebar-menu">
 
-          <a
-            href="#home"
-            onClick={closeMenu}
-          >
-            <span>01</span>
-            Home
-          </a>
+          {navItems.map((item, index) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className={
+                activeSection === item.id ? 'active' : ''
+              }
+              onClick={() => {
+                setActiveSection(item.id)
+                closeMenu()
+              }}
+            >
+              <span>
+                {String(index + 1).padStart(2, '0')}
+              </span>
 
-          <a
-            href="#about"
-            onClick={closeMenu}
-          >
-            <span>02</span>
-            About
-          </a>
-
-          <a
-            href="#experience"
-            onClick={closeMenu}
-          >
-            <span>03</span>
-            Experience
-          </a>
-
-          <a
-            href="#projects"
-            onClick={closeMenu}
-          >
-            <span>04</span>
-            Projects
-          </a>
-
-          <a
-            href="#skills"
-            onClick={closeMenu}
-          >
-            <span>05</span>
-            Skills
-          </a>
-
-          <a
-            href="#contact"
-            onClick={closeMenu}
-          >
-            <span>06</span>
-            Contact
-          </a>
+              {item.label}
+            </a>
+          ))}
 
         </nav>
 

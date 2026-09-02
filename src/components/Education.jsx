@@ -12,7 +12,7 @@ function Education() {
       degree: 'Bachelor of Computer Science',
       institution: 'Universitas Lampung',
       detail:
-        'Ilmu Komputer · Fakultas Matematika dan Ilmu Pengetahuan Alam',
+        'S1 Ilmu Komputer · Fakultas Matematika dan Ilmu Pengetahuan Alam',
       highlight: 'GPA 3.54 / 4.00',
       featured: true,
     },

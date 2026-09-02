@@ -5,6 +5,13 @@ import {
   FiPenTool,
   FiTool,
   FiUsers,
+  FiGlobe,
+  FiImage,
+  FiMonitor,
+  FiGitBranch,
+  FiGithub,
+  FiSend,
+  FiLayers,
 } from 'react-icons/fi'
 
 function Skills() {
@@ -15,49 +22,128 @@ function Skills() {
       description:
         'Technologies I use to build responsive and functional web applications.',
       skills: [
-        'JavaScript',
-        'React.js',
-        'HTML',
-        'CSS',
-        'Tailwind CSS',
+        {
+          name: 'JavaScript',
+          icon: <FiCode />,
+          className: 'javascript',
+        },
+        {
+          name: 'React.js',
+          icon: <FiLayers />,
+          className: 'react',
+        },
+        {
+          name: 'HTML',
+          icon: <FiCode />,
+          className: 'html',
+        },
+        {
+          name: 'CSS',
+          icon: <FiCode />,
+          className: 'css',
+        },
+        {
+          name: 'Tailwind CSS',
+          icon: <FiLayers />,
+          className: 'tailwind',
+        },
       ],
     },
+
     {
       icon: <FiDatabase />,
       title: 'Backend & Database',
       description:
         'Tools and technologies for developing application logic and managing data.',
       skills: [
-        'PHP',
-        'Laravel',
-        'MySQL',
-        'REST API',
-        'SQL',
+        {
+          name: 'PHP',
+          icon: <FiCode />,
+          className: 'php',
+        },
+        {
+          name: 'Laravel',
+          icon: <FiLayers />,
+          className: 'laravel',
+        },
+        {
+          name: 'MySQL',
+          icon: <FiDatabase />,
+          className: 'mysql',
+        },
+        {
+          name: 'REST API',
+          icon: <FiGlobe />,
+          className: 'rest-api',
+        },
+        {
+          name: 'SQL',
+          icon: <FiDatabase />,
+          className: 'sql',
+        },
       ],
     },
+
     {
       icon: <FiPenTool />,
       title: 'UI / UX & Design',
       description:
         'Design tools I use to translate ideas into clear and user-friendly interfaces.',
       skills: [
-        'Figma',
-        'UI/UX Design',
-        'Adobe Photoshop',
-        'Canva',
+        {
+          name: 'Figma',
+          icon: <FiPenTool />,
+          className: 'figma',
+        },
+        {
+          name: 'UI/UX Design',
+          icon: <FiPenTool />,
+          className: 'uiux',
+        },
+        {
+          name: 'Adobe Photoshop',
+          icon: <FiImage />,
+          className: 'photoshop',
+        },
+        {
+          name: 'Canva',
+          icon: <FiPenTool />,
+          className: 'canva',
+        },
       ],
     },
+
     {
       icon: <FiTool />,
       title: 'Tools & Workflow',
       description:
         'Tools that support my development workflow and project collaboration.',
       skills: [
-        'Git',
-        'GitHub',
-        'VS Code',
-        'Postman',
-        'Vercel',
+        {
+          name: 'Git',
+          icon: <FiGitBranch />,
+          className: 'git',
+        },
+        {
+          name: 'GitHub',
+          icon: <FiGithub />,
+          className: 'github',
+        },
+        {
+          name: 'VS Code',
+          icon: <FiMonitor />,
+          className: 'vscode',
+        },
+        {
+          name: 'Postman',
+          icon: <FiSend />,
+          className: 'postman',
+        },
+        {
+          name: 'Vercel',
+          icon: <FiGlobe />,
+          className: 'vercel',
+        },
       ],
     },
   ]
@@ -77,7 +163,6 @@ function Skills() {
       <div className="container">
 
         {/* Heading */}
-
         <motion.div
           className="section-heading skills-heading"
           initial={{
@@ -111,8 +196,8 @@ function Skills() {
           </p>
         </motion.div>
 
-        {/* Skill Groups */}
 
+        {/* Skill Groups */}
         <div className="skills-grid">
 
           {skillGroups.map((group, index) => (
@@ -129,18 +214,32 @@ function Skills() {
               }}
               viewport={{
                 once: true,
+                amount: 0.2,
               }}
               transition={{
-                duration: 0.5,
-                delay: index * 0.08,
+                duration: 0.55,
+                delay: index * 0.1,
+                ease: [0.22, 1, 0.36, 1],
               }}
             >
 
+              {/* Card Header */}
               <div className="skill-card-top">
 
-                <div className="skill-icon">
+                <motion.div
+                  className="skill-icon"
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: -3,
+                  }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 15,
+                  }}
+                >
                   {group.icon}
-                </div>
+                </motion.div>
 
                 <span className="skill-index">
                   0{index + 1}
@@ -148,6 +247,8 @@ function Skills() {
 
               </div>
 
+
+              {/* Card Content */}
               <h3>
                 {group.title}
               </h3>
@@ -156,12 +257,34 @@ function Skills() {
                 {group.description}
               </p>
 
+
+              {/* Technology List */}
               <div className="skill-list">
 
                 {group.skills.map((skill) => (
-                  <span key={skill}>
-                    {skill}
-                  </span>
+                  <motion.span
+                    key={skill.name}
+                    className={`skill-item ${skill.className}`}
+                    whileHover={{
+                      y: -3,
+                      scale: 1.03,
+                    }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 400,
+                      damping: 18,
+                    }}
+                  >
+
+                    <span className="skill-item-icon">
+                      {skill.icon}
+                    </span>
+
+                    <span className="skill-item-name">
+                      {skill.name}
+                    </span>
+
+                  </motion.span>
                 ))}
 
               </div>
@@ -171,8 +294,8 @@ function Skills() {
 
         </div>
 
-        {/* Soft Skills */}
 
+        {/* Soft Skills */}
         <motion.div
           className="soft-skills"
           initial={{
@@ -185,17 +308,30 @@ function Skills() {
           }}
           viewport={{
             once: true,
+            amount: 0.2,
           }}
           transition={{
             duration: 0.6,
+            delay: 0.15,
           }}
         >
 
+          {/* Soft Skills Header */}
           <div className="soft-skills-heading">
 
-            <div className="soft-skills-icon">
+            <motion.div
+              className="soft-skills-icon"
+              animate={{
+                y: [0, -4, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            >
               <FiUsers />
-            </div>
+            </motion.div>
 
             <div>
               <span>
@@ -209,12 +345,34 @@ function Skills() {
 
           </div>
 
+
+          {/* Soft Skills List */}
           <div className="soft-skills-list">
 
-            {softSkills.map((skill) => (
-              <span key={skill}>
+            {softSkills.map((skill, index) => (
+              <motion.span
+                key={skill}
+                initial={{
+                  opacity: 0,
+                  scale: 0.9,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.35,
+                  delay: 0.25 + index * 0.06,
+                }}
+                whileHover={{
+                  y: -3,
+                }}
+              >
                 {skill}
-              </span>
+              </motion.span>
             ))}
 
           </div>

@@ -9,16 +9,48 @@ import {
   FiChevronRight,
 } from 'react-icons/fi'
 
+// ================================
+// PLN FUEL
+// ================================
 import plnFuelCover from '../assets/projects/pln-fuel/cover.png'
 import plnFuelDashboard from '../assets/projects/pln-fuel/dashboard.png'
 import plnFuelReport from '../assets/projects/pln-fuel/fuel-report.png'
 import plnFuelAnalysis from '../assets/projects/pln-fuel/fuel-analysis.png'
 import plnFuelReports from '../assets/projects/pln-fuel/reports.png'
 
+// ================================
+// PLN FIELD
+// ================================
 import plnFieldCover from '../assets/projects/pln-field/cover.png'
 import plnFieldDashboard from '../assets/projects/pln-field/dashboard.png'
 import plnFieldWorkReport from '../assets/projects/pln-field/work-report.png'
 import plnFieldComplaints from '../assets/projects/pln-field/complaints.png'
+
+// ================================
+// GO-LEARN
+// ================================
+import goLearnGambar1 from '../assets/projects/golearn/gambar1.png'
+import goLearnGambar2 from '../assets/projects/golearn/gambar2.png'
+import goLearnGambar3 from '../assets/projects/golearn/gambar3.png'
+import goLearnGambar4 from '../assets/projects/golearn/gambar4.png'
+import goLearnGambar5 from '../assets/projects/golearn/gambar5.png'
+import goLearnGambar6 from '../assets/projects/golearn/gambar6.png'
+
+// ================================
+// SAVORHOUSE UI/UX
+// ================================
+import savorhouseCover from '../assets/projects/savorhouse/cover.png'
+import savorhouseDashboard from '../assets/projects/savorhouse/dashboard.png'
+import savorhouseMenu from '../assets/projects/savorhouse/menu.png'
+import savorhouseRegister from '../assets/projects/savorhouse/register.png'
+import savorhouseOrder from '../assets/projects/savorhouse/order.png'
+import savorhousePayment from '../assets/projects/savorhouse/payment.png'
+
+// ================================
+// GADGETHUB UI/UX
+// ================================
+import gadgetHubCover from '../assets/projects/gadgethub/cover.png'
+import gadgetHubDesign from '../assets/projects/gadgethub/design.png'
 
 
 function Projects() {
@@ -27,21 +59,18 @@ function Projects() {
   const [filter, setFilter] = useState('All')
 
 
-  /* ================================
-     PROJECT DATA
-  ================================ */
-
   const projects = [
+
+    // ================================
+    // PROJECT 01
+    // PLN FUEL
+    // ================================
     {
       id: 1,
       number: '01',
-
-      systemName: 'SIPER BBM',
-
       category: 'Web Development',
-
-      title:
-        'PLN Fuel Monitoring & Efficiency Analysis System',
+      systemName: 'SIPER BBM',
+      title: 'PLN Fuel Monitoring & Efficiency Analysis System',
 
       cover: plnFuelCover,
 
@@ -67,27 +96,22 @@ function Projects() {
       ],
 
       role: 'System Developer',
-
       year: '2025',
 
-      github: '',
-
-      demo: '',
+      github:
+        'https://github.com/setiawanwibi/siper_bbm',
     },
 
 
-    /* ================================
-       PROJECT 02
-    ================================ */
-
+    // ================================
+    // PROJECT 02
+    // PLN FIELD
+    // ================================
     {
       id: 2,
       number: '02',
-
-      systemName: 'SIGAP PLN',
-
       category: 'Web Development',
-
+      systemName: 'SIGAP PLN',
       title:
         'Field Work Reporting & Customer Complaint System',
 
@@ -114,23 +138,151 @@ function Projects() {
       ],
 
       role: 'Web Developer',
-
       year: '2025',
 
-      github: '',
+      github:
+        'https://github.com/setiawanwibi/sigap-pln',
+    },
 
-      demo: '',
+
+    // ================================
+    // PROJECT 03
+    // GO-LEARN
+    // ================================
+    {
+      id: 3,
+      number: '03',
+      category: 'Web Development',
+      systemName: 'Golearn',
+      title: 'Online Learning Platform',
+
+      cover: goLearnGambar1,
+
+      images: [
+        goLearnGambar1,
+        goLearnGambar2,
+        goLearnGambar3,
+        goLearnGambar4,
+        goLearnGambar5,
+        goLearnGambar6,
+      ],
+
+      shortDescription:
+        'A web-based learning platform designed to provide accessible online learning through structured educational content and learning packages.',
+
+      description:
+        'Go-Learn is a web-based online learning platform developed to provide users with accessible and structured educational content. The platform includes learning content, learning packages, user authentication, and an informative About page. The system was designed with a clean and responsive interface to create a simple and comfortable learning experience.',
+
+      technologies: [
+        'PHP',
+        'MySQL',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Figma',
+      ],
+
+      role: 'Full-Stack Web Developer',
+      year: '2026',
+
+      github:
+        'https://github.com/setiawanwibi/go-learn',
+
+      demo:
+        'https://golearn.free.je/',
+    },
+
+
+    // ================================
+    // PROJECT 04
+    // SAVORHOUSE
+    // ================================
+    {
+      id: 4,
+      number: '04',
+      category: 'UI/UX Design',
+
+      systemName: 'Savorhouse',
+
+      title: 'Restaurant Ordering Platform',
+
+      cover: savorhouseCover,
+
+      images: [
+        savorhouseCover,
+        savorhouseDashboard,
+        savorhouseMenu,
+        savorhouseRegister,
+        savorhouseOrder,
+        savorhousePayment,
+      ],
+
+      shortDescription:
+        'A restaurant website concept designed to create a simple, intuitive, and visually consistent experience from menu discovery to payment.',
+
+      description:
+        'Savorhouse is a restaurant website UI/UX design concept focused on creating a clear and intuitive customer journey. The design covers menu exploration, customer registration, order management, and payment while maintaining a consistent visual identity across the platform.',
+
+      technologies: [
+        'Figma',
+        'UI Design',
+        'UX Design',
+        'Prototyping',
+      ],
+
+      role: 'UI/UX Designer',
+      year: '2026',
+
+      figma:
+        'https://www.figma.com/design/UjE7BehvBtobHyovG1g5iL/Savorhouse?node-id=0-1&p=f&m=draw',
+    },
+
+
+    // ================================
+    // PROJECT 05
+    // GADGETHUB
+    // ================================
+    {
+      id: 5,
+      number: '05',
+      category: 'UI/UX Design',
+
+      systemName: 'GadgetHub',
+
+      title: 'E-Commerce Platform',
+
+      cover: gadgetHubCover,
+
+      images: [
+        gadgetHubDesign,
+      ],
+
+      shortDescription:
+        'An e-commerce website concept designed to provide a simple and intuitive shopping experience for browsing products, managing orders, and completing purchases.',
+
+      description:
+        'GadgetHub is an e-commerce UI/UX design concept focused on creating a clean and straightforward shopping experience. The design covers product discovery, user authentication, product management, shopping orders, and payment flow with a consistent visual interface.',
+
+      technologies: [
+        'Figma',
+        'UI Design',
+        'UX Design',
+        'Prototyping',
+      ],
+
+      role: 'UI/UX Designer',
+      year: '2026',
+
+      figma:
+        'https://www.figma.com/design/DXcehTtVDcRICHr6cBrley/Gadgethub---MPTI?node-id=0-1&p=f&t=8qz4MbHkNyfjD0ZB-0',
     },
   ]
 
 
-  /* ================================
-     FILTER
-  ================================ */
-
-  const categories = [
+  const filters = [
     'All',
     'Web Development',
+    'UI/UX Design',
   ]
 
 
@@ -138,42 +290,75 @@ function Projects() {
     filter === 'All'
       ? projects
       : projects.filter(
-          (project) => project.category === filter,
+          (project) =>
+            project.category === filter
         )
 
 
-  /* ================================
-     OPEN PROJECT
-  ================================ */
-
+  // ================================
+  // OPEN PROJECT
+  // ================================
   const openProject = (project) => {
     setActiveProject(project)
     setActiveImage(0)
+    document.body.style.overflow = 'hidden'
   }
 
 
-  /* ================================
-     CLOSE PROJECT
-  ================================ */
-
+  // ================================
+  // CLOSE PROJECT
+  // ================================
   const closeProject = () => {
     setActiveProject(null)
     setActiveImage(0)
+    document.body.style.overflow = ''
+  }
+
+
+  // ================================
+  // NEXT IMAGE
+  // ================================
+  const nextImage = (event) => {
+    event?.stopPropagation()
+
+    if (!activeProject) return
+
+    setActiveImage((current) =>
+      current ===
+      activeProject.images.length - 1
+        ? 0
+        : current + 1
+    )
+  }
+
+
+  // ================================
+  // PREVIOUS IMAGE
+  // ================================
+  const previousImage = (event) => {
+    event?.stopPropagation()
+
+    if (!activeProject) return
+
+    setActiveImage((current) =>
+      current === 0
+        ? activeProject.images.length - 1
+        : current - 1
+    )
   }
 
 
   return (
     <section
       id="projects"
-      
       className="projects-section"
     >
-      <div className="container">
 
+      <div className="container">
 
         {/* ================================
             HEADING
-        ================================= */}
+        ================================ */}
 
         <motion.div
           className="section-heading projects-heading"
@@ -201,75 +386,52 @@ function Projects() {
             PROJECTS
           </span>
 
-
           <h2>
-            Things I've
-            <span> built.</span>
+            Selected things
+            <span> I've built.</span>
           </h2>
 
-
           <p>
-            Selected projects, experiments, and digital
-            solutions I've worked on throughout my journey.
+            A selection of projects combining
+            software development, information systems,
+            and user-centered design.
           </p>
 
         </motion.div>
 
 
-
         {/* ================================
             FILTER
-        ================================= */}
+        ================================ */}
 
-        <motion.div
-          className="project-filter"
+        <div className="project-filter">
 
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-
-          viewport={{
-            once: true,
-          }}
-
-          transition={{
-            duration: 0.5,
-          }}
-        >
-
-          {categories.map((category) => (
+          {filters.map((item) => (
 
             <button
-              key={category}
+              key={item}
 
               className={
-                filter === category
+                filter === item
                   ? 'active'
                   : ''
               }
 
               onClick={() =>
-                setFilter(category)
+                setFilter(item)
               }
             >
-              {category}
+              {item}
             </button>
 
           ))}
 
-        </motion.div>
-
+        </div>
 
 
         {/* ================================
             PROJECT LIST
-        ================================= */}
+        ================================ */}
 
         <div className="projects-list">
 
@@ -280,14 +442,13 @@ function Projects() {
 
                 <motion.article
                   className="project-card"
-
                   key={project.id}
 
                   layout
 
                   initial={{
                     opacity: 0,
-                    y: 40,
+                    y: 30,
                   }}
 
                   animate={{
@@ -310,8 +471,7 @@ function Projects() {
                   }
                 >
 
-
-                  {/* Cover */}
+                  {/* COVER */}
 
                   <div className="project-cover">
 
@@ -320,19 +480,14 @@ function Projects() {
                       alt={project.title}
                     />
 
+                    <span className="project-number">
+                      {project.number}
+                    </span>
+
                   </div>
 
 
-
-                  {/* Number */}
-
-                  <div className="project-number">
-                    {project.number}
-                  </div>
-
-
-
-                  {/* Content */}
+                  {/* CONTENT */}
 
                   <div className="project-content">
 
@@ -349,14 +504,16 @@ function Projects() {
                     </div>
 
 
-                    {/* System Name */}
+                    {/* SYSTEM NAME - UI/UX */}
 
-                    <h3 className="project-system-name">
-                      {project.systemName}
-                    </h3>
+                    {project.systemName && (
 
+                      <h3 className="project-system-name">
+                        {project.systemName}
+                      </h3>
 
-                    {/* Project Title */}
+                    )}
+
 
                     <h3>
                       {project.title}
@@ -367,6 +524,8 @@ function Projects() {
                       {project.shortDescription}
                     </p>
 
+
+                    {/* TECHNOLOGIES */}
 
                     <div className="project-technologies">
 
@@ -379,7 +538,7 @@ function Projects() {
                             {technology}
                           </span>
 
-                        ),
+                        )
                       )}
 
                     </div>
@@ -387,16 +546,107 @@ function Projects() {
                   </div>
 
 
+                  {/* ACTIONS */}
 
-                  {/* Arrow */}
+                  <div className="project-actions">
 
-                  <div className="project-arrow">
-                    <FiArrowUpRight />
+                    {/* VIEW PROJECT */}
+
+                    <button
+                      className="project-view-btn"
+
+                      onClick={(event) => {
+                        event.stopPropagation()
+                        openProject(project)
+                      }}
+                    >
+
+                      View Project
+
+                      <FiArrowUpRight />
+
+                    </button>
+
+
+                    {/* GITHUB */}
+
+                    {project.github && (
+
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+
+                        className="project-source-btn"
+
+                        onClick={(event) =>
+                          event.stopPropagation()
+                        }
+                      >
+
+                        <FiGithub />
+
+                        Source Code
+
+                      </a>
+
+                    )}
+
+
+                    {/* LIVE WEB */}
+
+                    {project.demo && (
+
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+
+                        className="project-source-btn"
+
+                        onClick={(event) =>
+                          event.stopPropagation()
+                        }
+                      >
+
+                        <FiExternalLink />
+
+                        Web Access
+
+                      </a>
+
+                    )}
+
+
+                    {/* FIGMA */}
+
+                    {project.figma && (
+
+                      <a
+                        href={project.figma}
+                        target="_blank"
+                        rel="noopener noreferrer"
+
+                        className="project-source-btn"
+
+                        onClick={(event) =>
+                          event.stopPropagation()
+                        }
+                      >
+
+                        <FiExternalLink />
+
+                        View Figma
+
+                      </a>
+
+                    )}
+
                   </div>
 
                 </motion.article>
 
-              ),
+              )
             )}
 
           </AnimatePresence>
@@ -406,10 +656,9 @@ function Projects() {
       </div>
 
 
-
       {/* ================================
           PROJECT MODAL
-      ================================= */}
+      ================================ */}
 
       <AnimatePresence>
 
@@ -433,30 +682,29 @@ function Projects() {
             onClick={closeProject}
           >
 
-
             <motion.div
               className="project-modal"
 
               initial={{
                 opacity: 0,
-                scale: 0.95,
                 y: 30,
+                scale: 0.98,
               }}
 
               animate={{
                 opacity: 1,
-                scale: 1,
                 y: 0,
+                scale: 1,
               }}
 
               exit={{
                 opacity: 0,
-                scale: 0.95,
-                y: 30,
+                y: 20,
+                scale: 0.98,
               }}
 
               transition={{
-                duration: 0.3,
+                duration: 0.35,
               }}
 
               onClick={(event) =>
@@ -464,69 +712,72 @@ function Projects() {
               }
             >
 
-
-              {/* Close */}
+              {/* CLOSE */}
 
               <button
                 className="project-modal-close"
 
                 onClick={closeProject}
 
-                aria-label="Close project details"
+                aria-label="Close project"
               >
+
                 <FiX />
+
               </button>
 
 
-
-              {/* Project Number */}
+              {/* NUMBER */}
 
               <span className="modal-project-number">
                 {activeProject.number}
               </span>
 
 
-
-              {/* Category */}
+              {/* CATEGORY */}
 
               <span className="modal-project-category">
                 {activeProject.category}
               </span>
 
 
-
-              {/* Title */}
+              {/* TITLE */}
 
               <h3>
+
+                {activeProject.systemName && (
+                  <>
+                    {activeProject.systemName}
+
+                    <br />
+                  </>
+                )}
+
                 {activeProject.title}
+
               </h3>
 
 
-
-              {/* Project Info */}
+              {/* INFO */}
 
               <div className="modal-project-info">
-
-                <span>
-                  {activeProject.year}
-                </span>
 
                 <span>
                   {activeProject.role}
                 </span>
 
-              </div>
+                <span>
+                  {activeProject.year}
+                </span>
 
+              </div>
 
 
               {/* ================================
                   GALLERY
-              ================================= */}
+              ================================ */}
 
               <div className="modal-project-gallery">
-
-
-                {/* Main Image */}
 
                 <div className="modal-gallery-main">
 
@@ -537,59 +788,60 @@ function Projects() {
                       ]
                     }
 
-                    alt={`${activeProject.title} screenshot ${
+                    alt={`${activeProject.title} ${
                       activeImage + 1
                     }`}
                   />
 
 
-
-                  {/* Navigation */}
-
                   {activeProject.images.length > 1 && (
                     <>
+
+                      {/* PREVIOUS */}
 
                       <button
                         className="gallery-nav gallery-prev"
 
-                        onClick={() =>
-                          setActiveImage(
-                            (current) =>
-                              current === 0
-                                ? activeProject.images.length - 1
-                                : current - 1,
-                          )
-                        }
+                        onClick={previousImage}
 
                         aria-label="Previous image"
                       >
+
                         <FiChevronLeft />
+
                       </button>
 
+
+                      {/* NEXT */}
 
                       <button
                         className="gallery-nav gallery-next"
 
-                        onClick={() =>
-                          setActiveImage(
-                            (current) =>
-                              current ===
-                              activeProject.images.length - 1
-                                ? 0
-                                : current + 1,
-                          )
-                        }
+                        onClick={nextImage}
 
                         aria-label="Next image"
                       >
+
                         <FiChevronRight />
+
                       </button>
 
 
-                      <span className="gallery-counter">
-                        {activeImage + 1} /{' '}
-                        {activeProject.images.length}
-                      </span>
+                      {/* COUNTER */}
+
+                      <div className="gallery-counter">
+
+                        {String(
+                          activeImage + 1
+                        ).padStart(2, '0')}
+
+                        {' / '}
+
+                        {String(
+                          activeProject.images.length
+                        ).padStart(2, '0')}
+
+                      </div>
 
                     </>
                   )}
@@ -597,70 +849,102 @@ function Projects() {
                 </div>
 
 
+                {/* THUMBNAILS */}
 
-                {/* ================================
-                    THUMBNAILS
-                ================================= */}
+                {activeProject.images.length > 1 && (
 
-                <div className="modal-gallery-thumbnails">
+                  <div className="modal-gallery-thumbnails">
 
-                  {activeProject.images.map(
-                    (image, index) => (
+                    {activeProject.images.map(
+                      (image, index) => (
 
-                      <button
-                        key={`${activeProject.id}-${index}`}
+                        <button
+                          key={index}
 
-                        className={
-                          activeImage === index
-                            ? 'active'
-                            : ''
-                        }
+                          className={
+                            activeImage === index
+                              ? 'active'
+                              : ''
+                          }
 
-                        onClick={() =>
-                          setActiveImage(index)
-                        }
+                          onClick={() =>
+                            setActiveImage(index)
+                          }
+                        >
 
-                        aria-label={`View screenshot ${
-                          index + 1
-                        }`}
-                      >
+                          <img
+                            src={image}
+                            alt={`Preview ${
+                              index + 1
+                            }`}
+                          />
 
-                        <img
-                          src={image}
-                          alt={`Project screenshot ${
-                            index + 1
-                          }`}
-                        />
+                        </button>
 
-                      </button>
+                      )
+                    )}
 
-                    ),
-                  )}
+                  </div>
 
-                </div>
+                )}
 
               </div>
 
 
-
-              {/* ================================
-                  DESCRIPTION
-              ================================= */}
+              {/* DESCRIPTION */}
 
               <p className="modal-project-description">
                 {activeProject.description}
               </p>
 
 
+              {/* UI/UX PROCESS */}
 
-              {/* ================================
-                  TECHNOLOGIES
-              ================================= */}
+              {activeProject.category ===
+                'UI/UX Design' && (
+
+                <div className="modal-project-stack">
+
+                  <h4>
+                    Design Process
+                  </h4>
+
+                  <div>
+
+                    <span>
+                      User Flow
+                    </span>
+
+                    <span>
+                      Wireframing
+                    </span>
+
+                    <span>
+                      UI Design
+                    </span>
+
+                    <span>
+                      Prototyping
+                    </span>
+
+                  </div>
+
+                </div>
+
+              )}
+
+
+              {/* TECHNOLOGIES */}
 
               <div className="modal-project-stack">
 
                 <h4>
-                  Technologies
+
+                  {activeProject.category ===
+                  'UI/UX Design'
+                    ? 'Tools & Skills'
+                    : 'Technologies'}
+
                 </h4>
 
 
@@ -675,7 +959,7 @@ function Projects() {
                         {technology}
                       </span>
 
-                    ),
+                    )
                   )}
 
                 </div>
@@ -683,19 +967,18 @@ function Projects() {
               </div>
 
 
-
-              {/* ================================
-                  ACTIONS
-              ================================= */}
+              {/* ACTIONS */}
 
               <div className="modal-project-actions">
+
+                {/* GITHUB */}
 
                 {activeProject.github && (
 
                   <a
                     href={activeProject.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
 
                     <FiGithub />
@@ -707,12 +990,33 @@ function Projects() {
                 )}
 
 
+                {/* FIGMA */}
+
+                {activeProject.figma && (
+
+                  <a
+                    href={activeProject.figma}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+
+                    <FiExternalLink />
+
+                    View Figma Prototype
+
+                  </a>
+
+                )}
+
+
+                {/* LIVE DEMO */}
+
                 {activeProject.demo && (
 
                   <a
                     href={activeProject.demo}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
 
                     <FiExternalLink />
