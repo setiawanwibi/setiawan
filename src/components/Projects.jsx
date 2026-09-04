@@ -27,6 +27,22 @@ import plnFieldWorkReport from '../assets/projects/pln-field/work-report.png'
 import plnFieldComplaints from '../assets/projects/pln-field/complaints.png'
 
 // ================================
+// GRIYA KOST
+// ================================
+import griyaKostCover from '../assets/projects/griyakost/coverr.png'
+import griyaKostGambar1 from '../assets/projects/griyakost/griya1.png'
+import griyaKostGambar2 from '../assets/projects/griyakost/griya2.png'
+import griyaKostGambar3 from '../assets/projects/griyakost/griya3.png'
+import griyaKostGambar4 from '../assets/projects/griyakost/griya4.png'
+import griyaKostGambar5 from '../assets/projects/griyakost/griya5.png'
+import griyaKostGambar6 from '../assets/projects/griyakost/griya6.png'
+import griyaKostGambar7 from '../assets/projects/griyakost/griya7.png'
+import griyaKostGambar8 from '../assets/projects/griyakost/griya8.png'
+import griyaKostGambar9 from '../assets/projects/griyakost/griya9.png'
+import griyaKostGambar10 from '../assets/projects/griyakost/griya10.png'
+import griyaKostGambar11 from '../assets/projects/griyakost/griya11.png'
+
+// ================================
 // GO-LEARN
 // ================================
 import goLearnGambar1 from '../assets/projects/golearn/gambar1.png'
@@ -95,8 +111,8 @@ function Projects() {
         'Figma',
       ],
 
-      role: 'System Developer',
-      year: '2025',
+      role: 'Fullstack Developer',
+      year: '2026',
 
       github:
         'https://github.com/setiawanwibi/siper_bbm',
@@ -137,13 +153,67 @@ function Projects() {
         'Figma',
       ],
 
-      role: 'Web Developer',
+      role: 'Fullstack Developer',
       year: '2025',
 
       github:
         'https://github.com/setiawanwibi/sigap-pln',
     },
 
+    // PROJECT 03
+// GRIYA KOST
+// ================================
+    {
+      id: 6,
+      number: '03',
+      category: 'Web Development',
+      systemName: 'Griya Kost',
+      title: 'Griya Kost Management System',
+
+      cover: griyaKostCover,
+
+      images: [
+        griyaKostGambar1,
+        griyaKostGambar2,
+        griyaKostGambar3,
+        griyaKostGambar4,
+        griyaKostGambar5,
+        griyaKostGambar6,
+        griyaKostGambar7,
+        griyaKostGambar8,
+        griyaKostGambar9,
+        griyaKostGambar10,
+        griyaKostGambar11,
+      ],
+
+      shortDescription:
+        'A full-stack web application for managing rooms, tenants, payments, finances, and reports for Griya Kost ITERA.',
+
+      description:
+        'Griya Kost is a full-stack web-based management system developed for Griya Kost ITERA to support and simplify its daily administrative operations. The project was developed to address the limitations of the previous manual management process, which relied on Excel for recording and managing room, tenant, payment, and financial data. This approach made data management more time-consuming and prone to input errors, inconsistencies, and difficulties in monitoring information. To address these challenges, the system provides centralized management for room data, tenant records, rental information, payment transactions, financial records, and reports through a responsive dashboard. The application uses a REST API architecture, JWT authentication, and a MySQL database, with the frontend and backend deployed online to provide a more efficient and organized management process.',
+
+      technologies: [
+        'React',
+        'Vite',
+        'JavaScript',
+        'Node.js',
+        'Express.js',
+        'REST API',
+        'MySQL',
+      ],
+
+      role: 'Full-Stack Web Developer',
+      year: '2026',
+
+      github:
+        'https://github.com/setiawanwibi/griyakost',
+
+      demo:
+        'https://griyakost-ten.vercel.app/',
+
+      systemDemo:
+        'https://drive.google.com/drive/folders/1SkUtSQwCgW8vudqVXYEPdTaAOyMoP_mP?usp=drive_link',
+    },
 
     // ================================
     // PROJECT 03
@@ -151,7 +221,7 @@ function Projects() {
     // ================================
     {
       id: 3,
-      number: '03',
+      number: '04',
       category: 'Web Development',
       systemName: 'Golearn',
       title: 'Online Learning Platform',
@@ -183,7 +253,7 @@ function Projects() {
       ],
 
       role: 'Full-Stack Web Developer',
-      year: '2026',
+      year: '2024',
 
       github:
         'https://github.com/setiawanwibi/go-learn',
@@ -199,7 +269,7 @@ function Projects() {
     // ================================
     {
       id: 4,
-      number: '04',
+      number: '05',
       category: 'UI/UX Design',
 
       systemName: 'Savorhouse',
@@ -231,7 +301,7 @@ function Projects() {
       ],
 
       role: 'UI/UX Designer',
-      year: '2026',
+      year: '2025',
 
       figma:
         'https://www.figma.com/design/UjE7BehvBtobHyovG1g5iL/Savorhouse?node-id=0-1&p=f&m=draw',
@@ -244,7 +314,7 @@ function Projects() {
     // ================================
     {
       id: 5,
-      number: '05',
+      number: '06',
       category: 'UI/UX Design',
 
       systemName: 'GadgetHub',
@@ -271,7 +341,7 @@ function Projects() {
       ],
 
       role: 'UI/UX Designer',
-      year: '2026',
+      year: '2024',
 
       figma:
         'https://www.figma.com/design/DXcehTtVDcRICHr6cBrley/Gadgethub---MPTI?node-id=0-1&p=f&t=8qz4MbHkNyfjD0ZB-0',
@@ -642,6 +712,20 @@ function Projects() {
 
                     )}
 
+                    {project.systemDemo && (
+                      <a
+                        href={project.systemDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-source-btn"
+                        onClick={(event) =>
+                          event.stopPropagation()
+                        }
+                      >
+                        <FiExternalLink />
+                        Demo System
+                      </a>
+                    )}
                   </div>
 
                 </motion.article>
@@ -1025,6 +1109,18 @@ function Projects() {
 
                   </a>
 
+                )}
+
+                {/* SYSTEM DEMO */}
+                {activeProject.systemDemo && (
+                  <a
+                    href={activeProject.systemDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiExternalLink />
+                    Demo System
+                  </a>
                 )}
 
               </div>

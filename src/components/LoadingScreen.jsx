@@ -76,25 +76,6 @@ function LoadingScreen({ onComplete }) {
         </motion.div>
 
 
-        <motion.p
-          className="loading-welcome"
-          initial={{
-            opacity: 0,
-            y: 15,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-            delay: 0.35,
-          }}
-        >
-          Portfolio
-        </motion.p>
-
-
         <motion.h1
           initial={{
             opacity: 0,
@@ -160,9 +141,18 @@ function LoadingScreen({ onComplete }) {
 
 
         <div className="loading-footer">
-          <span>BUILDING IDEAS INTO DIGITAL SOLUTIONS.</span>
+
+          <motion.span
+            className="loading-status"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            BUILDING IDEAS INTO DIGITAL SOLUTIONS.
+          </motion.span>
 
           <span>01 / 01</span>
+
         </div>
 
       </div>

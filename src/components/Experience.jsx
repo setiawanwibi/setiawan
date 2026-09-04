@@ -22,7 +22,7 @@ function Experience() {
       employment: 'Full-time',
       mode: 'On-site',
       description:
-        'Assisted the lecturer in supporting students during the Multimedia course, including practical activities, learning assistance, and academic tasks.',
+        'Membantu dosen dalam mendampingi mahasiswa selama perkuliahan Multimedia, termasuk kegiatan praktikum, pendampingan pembelajaran, dan tugas akademik.',
       tags: ['Teaching', 'Multimedia', 'Academic'],
       icon: <FiBookOpen />,
       image: sertifikatmulmed,
@@ -38,7 +38,7 @@ function Experience() {
       employment: 'Part-time',
       mode: 'Hybrid',
       description:
-        'Managed end-to-end event documentation as a photographer and videographer for community outreach and social welfare programs. Edited video content and designed visual assets for organizational reporting, publications, and official social media channels.',
+        'Mengelola dokumentasi acara secara menyeluruh sebagai fotografer dan videografer untuk program pengabdian masyarakat dan kesejahteraan sosial. Mengedit konten video serta merancang aset visual untuk laporan organisasi, publikasi, dan kanal media sosial resmi.',
       tags: ['Photography', 'Video Editing', 'Digital Production'],
       icon: <FiCamera />,
       image: fotographer,
@@ -54,7 +54,7 @@ function Experience() {
       employment: 'Apprenticeship',
       mode: 'On-site',
       description:
-        'Supported digital administrative processes and field-work reporting activities through PLN internal systems while contributing to structured data management, documentation, and digitalization initiatives.',
+        'Mendukung proses administrasi digital dan kegiatan pelaporan pekerjaan lapangan melalui sistem internal PLN, sekaligus berkontribusi dalam pengelolaan data terstruktur, dokumentasi, dan inisiatif digitalisasi.',
       tags: ['Internship', 'Information Systems', 'Digitalization'],
       icon: <FiBriefcase />,
       image: sertifikatkp,

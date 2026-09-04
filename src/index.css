@@ -688,7 +688,7 @@ html.light .navbar-logo {
 
   cursor: pointer;
 
-  color: #facc15;
+  color: #f8fafc;;
 
   transition:
     background 0.25s ease,
@@ -1068,7 +1068,7 @@ html.light .theme-toggle {
 
   background: #ffffff;
 
-  color: #eab308;
+  color: #020202;
 }
 
 html.light .theme-toggle:hover {
@@ -4082,7 +4082,7 @@ html.light .mobile-sidebar-bottom > a:hover {
 /* Gold statistic */
 
 .stat-card:nth-child(2) strong {
-  color: #c9a91a;
+  color: #facc15;
 }
 
 .stat-card small {
@@ -9585,9 +9585,38 @@ html.light .profile-section {
 }
 
 html.light .section-heading h2 {
-  color: #0f172a;
+  background: linear-gradient(
+    115deg,
+    #0f172a 0%,
+    #334155 32%,
+    #ffffff 45%,
+    #0f172a 52%,
+    #334155 68%,
+    #0f172a 100%
+  );
+
+  background-size: 250% 100%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  animation: sectionHeadingShine 8s ease-in-out infinite;
 }
 
+@keyframes sectionHeadingShine {
+  0% {
+    background-position: 150% center;
+  }
+
+  35% {
+    background-position: -50% center;
+  }
+
+  100% {
+    background-position: -50% center;
+  }
+}
 html.light .section-heading p {
   color: #64748b;
 }
@@ -11445,9 +11474,8 @@ html.light .footer::after {
   }
 
 }
-
 /* ========================================
-   PREMIUM LOADING SCREEN
+   PREMIUM TECH LOADING SCREEN
 ======================================== */
 
 .loading-screen {
@@ -11609,7 +11637,9 @@ html.light .footer::after {
 }
 
 
-/* Blue indicator */
+/* ========================================
+   BLUE TOP INDICATOR
+======================================== */
 
 .loading-top::before {
   content: '';
@@ -11627,6 +11657,38 @@ html.light .footer::after {
   box-shadow:
     0 0 12px
     rgba(59, 130, 246, 0.55);
+}
+
+
+/* ========================================
+   TOP TECH DATA
+======================================== */
+
+.loading-top span:first-child::before {
+  content: '01';
+
+  margin-right: 9px;
+
+  color: #3b82f6;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+
+  opacity: 0.8;
+}
+
+
+.loading-top span:last-child::before {
+  content: 'SYSTEM';
+
+  margin-right: 9px;
+
+  color: #475569;
+
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
 }
 
 
@@ -11707,7 +11769,7 @@ html.light .footer::after {
 
 
 /* ========================================
-   ROTATING OUTER RING
+   DASHED OUTER RING
 ======================================== */
 
 .loading-image::before {
@@ -11717,15 +11779,15 @@ html.light .footer::after {
 
   inset: -9px;
 
-  border-radius: 50%;
-
   border:
     1px dashed
     rgba(59, 130, 246, 0.18);
 
+  border-radius: 50%;
+
   animation:
     loadingRotate
-    12s
+    14s
     linear
     infinite;
 }
@@ -11785,7 +11847,9 @@ html.light .footer::after {
 }
 
 
-/* Blue decorative lines */
+/* ========================================
+   WELCOME DECORATIVE LINES
+======================================== */
 
 .loading-welcome::before,
 .loading-welcome::after {
@@ -11793,7 +11857,7 @@ html.light .footer::after {
 
   display: inline-block;
 
-  width: 24px;
+  width: 30px;
   height: 1px;
 
   margin: 0 10px;
@@ -11801,7 +11865,13 @@ html.light .footer::after {
   vertical-align: middle;
 
   background:
-    rgba(59, 130, 246, 0.55);
+    repeating-linear-gradient(
+      90deg,
+      #3b82f6 0 5px,
+      transparent 5px 9px
+    );
+
+  opacity: 0.65;
 }
 
 
@@ -11835,7 +11905,9 @@ html.light .footer::after {
 }
 
 
-/* Blue surname */
+/* ========================================
+   BLUE SURNAME
+======================================== */
 
 .loading-center h1 span {
   color: #3b82f6;
@@ -11843,6 +11915,10 @@ html.light .footer::after {
   font-style: italic;
 
   font-weight: 800;
+
+  text-shadow:
+    0 0 24px
+    rgba(59, 130, 246, 0.12);
 }
 
 
@@ -11853,7 +11929,7 @@ html.light .footer::after {
 .loading-role {
   margin-top: 18px;
 
-  color: #e6c51a;
+  color: #facc15;
 
   font-family:
     'Inter',
@@ -11869,7 +11945,7 @@ html.light .footer::after {
 
   text-shadow:
     0 0 12px
-    rgba(230, 197, 26, 0.15);
+    rgba(250, 204, 21, 0.15);
 }
 
 
@@ -11915,36 +11991,97 @@ html.light .footer::after {
 
 
 /* ========================================
+   LOADING STATUS INDICATOR
+======================================== */
+
+.loading-progress-info span:first-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.loading-progress-info span:first-child::before {
+  content: '';
+
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #3b82f6;
+
+  box-shadow:
+    0 0 8px
+    rgba(59, 130, 246, 0.7);
+
+  animation:
+    loadingIndicator
+    1s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes loadingIndicator {
+
+  0%,
+  100% {
+    opacity: 0.35;
+
+    transform:
+      scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.15);
+  }
+
+}
+
+
+/* ========================================
    PERCENTAGE
-   YELLOW
 ======================================== */
 
 .loading-progress-info span:last-child {
-  color: #ffd91a;
+  color: #facc15;
 
   font-size: 10px;
 
   text-shadow:
     0 0 14px
-    rgba(255, 217, 26, 0.35);
+    rgba(250, 204, 21, 0.35);
 }
 
 
 /* ========================================
-   PROGRESS TRACK
+   TECHNICAL PROGRESS TRACK
 ======================================== */
 
 .loading-progress {
   position: relative;
 
   width: 100%;
-
-  height: 3px;
+  height: 4px;
 
   overflow: hidden;
 
   background:
-    rgba(255, 255, 255, 0.08);
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.13) 0px,
+      rgba(255, 255, 255, 0.13) 1px,
+      transparent 1px,
+      transparent 9px
+    );
 
   border-radius: 999px;
 }
@@ -11952,7 +12089,6 @@ html.light .footer::after {
 
 /* ========================================
    PROGRESS BAR
-   YELLOW
 ======================================== */
 
 .loading-progress-bar {
@@ -11963,21 +12099,70 @@ html.light .footer::after {
   background:
     linear-gradient(
       90deg,
-      #b99b00,
-      #ffd91a,
-      #ffe875
+      #8f7800 0%,
+      #facc15 55%,
+      #ffe875 100%
     );
 
   border-radius: 999px;
 
   box-shadow:
     0 0 10px
-    rgba(255, 217, 26, 0.55),
+    rgba(250, 204, 21, 0.5),
 
     0 0 22px
-    rgba(255, 217, 26, 0.25);
+    rgba(250, 204, 21, 0.2);
 
   overflow: hidden;
+}
+
+
+/* ========================================
+   MOVING TECH TICKS
+======================================== */
+
+.loading-progress-bar::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 7px,
+      rgba(255, 255, 255, 0.55) 7px,
+      rgba(255, 255, 255, 0.55) 8px,
+      transparent 8px,
+      transparent 12px
+    );
+
+  opacity: 0.28;
+
+  mix-blend-mode: screen;
+
+  animation:
+    progressTicks
+    1.2s
+    linear
+    infinite;
+}
+
+
+@keyframes progressTicks {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(12px);
+  }
+
 }
 
 
@@ -11991,22 +12176,22 @@ html.light .footer::after {
   position: absolute;
 
   top: 0;
-  left: -100%;
+  left: -40%;
 
-  width: 45%;
+  width: 35%;
   height: 100%;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.9),
       transparent
     );
 
   animation:
     progressShine
-    2.8s
+    1.8s
     ease-in-out
     infinite;
 }
@@ -12015,15 +12200,242 @@ html.light .footer::after {
 @keyframes progressShine {
 
   0% {
-    left: -100%;
+    left: -40%;
   }
 
   55% {
-    left: 130%;
+    left: 110%;
   }
 
   100% {
-    left: 130%;
+    left: 110%;
+  }
+
+}
+
+
+/* ========================================
+   LOADING FOOTER
+======================================== */
+
+.loading-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 11px;
+
+  color: #334155;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   TYPING STATUS
+======================================== */
+
+.loading-status {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  max-width: max-content;
+
+  white-space: nowrap;
+
+  color: #475569;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  animation:
+    typingText
+    2.8s
+    steps(38, end)
+    infinite alternate;
+}
+
+
+.loading-status::after {
+  content: '';
+
+  display: inline-block;
+
+  width: 5px;
+  height: 9px;
+
+  margin-left: 5px;
+
+  vertical-align: -2px;
+
+  background: #3b82f6;
+
+  animation:
+    typingCursor
+    0.8s
+    steps(1)
+    infinite;
+}
+
+
+@keyframes typingText {
+
+  0% {
+    width: 0;
+  }
+
+  70%,
+  100% {
+    width: 100%;
+  }
+
+}
+
+
+@keyframes typingCursor {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+
+}
+
+
+/* ========================================
+   FOOTER PAGE INDICATOR
+======================================== */
+
+.loading-footer > span:last-child {
+  color: #334155;
+
+  font-size: 7px;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 800px) {
+
+  .loading-screen {
+    padding: 28px;
+  }
+
+  .loading-bottom {
+    max-width: 100%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .loading-screen {
+    padding: 24px 20px;
+  }
+
+
+  .loading-top {
+    font-size: 8px;
+  }
+
+
+  .loading-top span:first-child::before,
+  .loading-top span:last-child::before {
+    display: none;
+  }
+
+
+  .loading-image {
+    width: 78px;
+    height: 78px;
+
+    margin-bottom: 24px;
+  }
+
+
+  .loading-welcome::before,
+  .loading-welcome::after {
+    width: 20px;
+
+    margin: 0 7px;
+  }
+
+
+  .loading-center h1 {
+    font-size:
+      clamp(
+        30px,
+        9vw,
+        42px
+      );
+  }
+
+
+  .loading-role {
+    font-size: 8px;
+  }
+
+
+  .loading-footer {
+    font-size: 6px;
+  }
+
+
+  .loading-status {
+    font-size: 6px;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .loading-status::after {
+    width: 4px;
+    height: 8px;
+  }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .loading-screen::after,
+  .loading-image,
+  .loading-image::before,
+  .loading-progress-info span:first-child::before,
+  .loading-progress-bar::before,
+  .loading-progress-bar::after,
+  .loading-status,
+  .loading-status::after {
+    animation: none;
   }
 
 }
@@ -12156,4 +12568,36 @@ html.light .footer::after {
 
   transform:
     scale(0.985);
+}
+
+/* =========================================================
+   PROJECT GALLERY - MANY THUMBNAILS
+========================================================= */
+
+.modal-gallery-thumbnails {
+  display: flex;
+  gap: 8px;
+
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-bottom: 5px;
+
+  scrollbar-width: thin;
+}
+
+.modal-gallery-thumbnails button {
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .modal-gallery-thumbnails {
+    gap: 6px;
+  }
 }
