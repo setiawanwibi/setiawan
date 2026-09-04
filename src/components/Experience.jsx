@@ -22,7 +22,7 @@ function Experience() {
       employment: 'Full-time',
       mode: 'On-site',
       description:
-        'Membantu dosen dalam mendampingi mahasiswa selama perkuliahan Multimedia, termasuk kegiatan praktikum, pendampingan pembelajaran, dan tugas akademik.',
+        'Assisted lecturers in supporting students throughout the Multimedia course, including practical sessions, learning activities, and academic assignments.',
       tags: ['Teaching', 'Multimedia', 'Academic'],
       icon: <FiBookOpen />,
       image: sertifikatmulmed,
@@ -38,7 +38,7 @@ function Experience() {
       employment: 'Part-time',
       mode: 'Hybrid',
       description:
-        'Mengelola dokumentasi acara secara menyeluruh sebagai fotografer dan videografer untuk program pengabdian masyarakat dan kesejahteraan sosial. Mengedit konten video serta merancang aset visual untuk laporan organisasi, publikasi, dan kanal media sosial resmi.',
+        'Handled event documentation as a photographer and videographer for community service and social welfare programs. Edited video content and created visual assets for organizational reports, publications, and official social media channels.',
       tags: ['Photography', 'Video Editing', 'Digital Production'],
       icon: <FiCamera />,
       image: fotographer,
@@ -54,14 +54,14 @@ function Experience() {
       employment: 'Apprenticeship',
       mode: 'On-site',
       description:
-        'Mendukung proses administrasi digital dan kegiatan pelaporan pekerjaan lapangan melalui sistem internal PLN, sekaligus berkontribusi dalam pengelolaan data terstruktur, dokumentasi, dan inisiatif digitalisasi.',
+        'Supported digital administrative processes and field work reporting through PLN’s internal systems, while contributing to structured data management, documentation, and digitalization initiatives.',
       tags: ['Internship', 'Information Systems', 'Digitalization'],
       icon: <FiBriefcase />,
       image: sertifikatkp,
       imageAlt: 'PT PLN Internship Certificate',
     },
   ]
-
+  
   return (
     <section id="experience" className="experience-section">
       <div className="container">
